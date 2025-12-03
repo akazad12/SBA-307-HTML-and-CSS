@@ -1,100 +1,196 @@
- html, body {
-    margin:0;
+html,
+body {
+    margin: 0;
     padding: 0;
     height: 100%;
     box-sizing: border-box;
-
 }
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
- 
- .navbar{
+
+.navbar {
+    /* code for navbar */
     position: fixed;
     top: 0;
-    width:100%;
+    width: 100%;
+    height: 80px;
     margin: 0;
-    z-index: 1000s;
-    list-style-type: none;
-    overflow: hidden;
-    display:flex;
     background-color: #6aa0bd;
-    flex-direction: row;
+    display: flex;
     align-items: center;
-    
-
+    z-index: 1000;
 }
 
-.navbar li  {
-  background-color: #ffffff;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-size: 18px;
-
-  overflow: hidden;
-  border-radius: 30%;
-}
-
-
-
-#logo{
-    height: 100px;
-    width: auto;
-
-
-} 
-
-
-.hero{
-    display:flex;
-    flex-wrap: wrap;
-
-}
-
-.hero h1 {
-    text-align: center;
-    font-size: 100px ;
+#logo {
+    /* Modifying navbar logo */
     position: absolute;
-    bottom: -2%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
+    height: 60px;
+    width: auto;
+    border-radius: 25%;
+}
 
+.dropdown {
+    /* positions hamburger to the left of the nav bar */
+    position: absolute;
+    left: 20px;
+}
+
+.hamburger-btn {
+    /* center hamburger lines */
+    width: 50px;
+    height: 50px;
+    background-color: #6aa0bd;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.hamburger-icon {
+    /* Modifies the inside of the hamburger button*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 10px;
+}
+
+.hamburger-icon span {
+    /* Creates individual Lines */
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.dropdown-menu {
+    /* formatting for drop down */
+    background-color: #6aa0bd;
+    border: none;
+    margin-top: 5px;
+}
+
+.dropdown-item {
+    /* Font Color */
+    color: white;
+    padding: 12px 20px;
+}
+
+.dropdown-item:hover {
+    /* changes color of items in dropdown menu */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.hero {
+    /* Sets framework for hero image */
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    min-height: 500px;
 }
 
 .hero img {
-
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    height: auto;
-    width: auto;
+    /* Modifies hero image to fit page */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.circles{
+#heroText {
+    /* formatting to load and display hero text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    margin: 0;
+    padding: 0 20px;
+    animation: heroFade 1s ease-out;
+}
+
+.circles {
+    /* flexbox for services circles w/ spacing */
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
     justify-content: space-around;
-    
-
+    padding: 0;
+    margin: 200px 20px 0;
+    gap: 40px;
 }
+
 .circles li {
-    margin-top: 200px;
+    /* Modifies images in services circles */
     font-size: 40px;
     text-align: center;
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
-.circles img{
-    border:1px solid black;
-    border-radius: 100%;
-    height: 400px;
-    width: auto;
-    max-width: fit-content;
+.circles p {
+    /* Creates pulsating text for services circles */
+    animation: colorPulse 3s ease-in-out infinite;
+    margin-top: 20px;
 }
 
- 
+.circles img {
+    /* Creates actual circles for the services circles */
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+@keyframes heroFade {
+    /* Upscales Herotext in a animated way */
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes colorPulse {
+    /* Pulses the text below the Service Circles */
+    0%,100% 
+    {
+        color: black;
+    }
+
+    50% {
+        color: #6aa0bd;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Page to accomodate different screen size */
+    #heroText {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Page to accomodate different screen size */
+    #heroText {
+        font-size: 35px;
+    }
+}
+

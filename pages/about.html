@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/stylesAbout.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        div {
-            display: flex;
-            justify-content: center;
-            height: 100vh;
-            align-items: center;
-        }
-
+        
 
         table {
             border-collapse: collapse;
@@ -46,39 +42,28 @@
 </head>
 
 <body>
-    <div>
-        <ul class="navbar">
-            <details class="hamburger">
-                <summary>
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="hamburger-btn" type="button" data-bs-toggle="dropdown">
+                <div class="hamburger-icon">
                     <span></span>
                     <span></span>
                     <span></span>
-                </summary>
-                <div class="nav-items">
-                    <li><a href="">Products</a></li>
-                    <li><a href="">Solutions</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Login</a></li>
-                    <li><a href="">Signup</a></li>
                 </div>
-            </details>
+            </button>
+            <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="./landingPage.html">Landing</a></li>
+                    <li><a class="dropdown-item" href="./Products.html">Products</a></li>
+                    <li><a class="dropdown-item" href="./Support.html">FAQ</a></li>
+                    <li><a class="dropdown-item" href="./About.html">About</a></li>
+                    <li><a class="dropdown-item" href="./Support.html">Support</a></li>
+                    <li><a class="dropdown-item" href="./Login.html">Login</a></li>
+                    <li><a class="dropdown-item" href="./Signup.html">Signup</a></li>
+                </ul>
+        </div>
 
-            <li style="background-color: #6aa0bd;"><a href=""></a>
-                <img style="border-radius: 25%" id='logo' src="../images/Screenshot 2025-11-30 at 11.08.00 PM.png"
-                    alt="logo">
-            </li>
-
-            <div class="nav-items">
-                <li><a href="https://www.google.com">Products</a></li>
-                <li><a href="">Solutions</a></li>
-                <li><a href="">About</a></li>
-                <li style=" margin-right: auto;"><a href="">Support</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Signup</a></li>
-            </div>
-        </ul>
-    </div>
+        <img id='logo' src="../images/citadel_financial_logo.gif" alt="logo">
+    </nav>
 
 
 
@@ -87,7 +72,7 @@
 
 
 
-    <div>
+    <div class="contacts">
        <table>
     <tr>
         <th>Name</th>
@@ -111,6 +96,8 @@
     <tr><td>Natalie White</td><td>Exercitationem@facilis!</td><td>(555) 215-6678</td></tr>
 </table>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ body{
     background-color: rgb(191, 219, 244);
 }
 
-div{
+.contacts{
     display:flex;
     justify-content: center;
     height: 100vh;
