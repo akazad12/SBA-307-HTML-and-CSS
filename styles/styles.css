@@ -28,12 +28,12 @@
 }
 
 .navbar li  {
-    background-color: #ffffff;
+  background-color: #ffffff;
   margin: 10px;
   padding: 10px;
   text-align: center;
   font-size: 18px;
-  /* flex:1 1 auto; */
+
   overflow: hidden;
   border-radius: 30%;
 }
@@ -44,14 +44,12 @@
     height: 100px;
     width: auto;
 
-    /* border-radius: 50px; */
 
 } 
 
 
 .hero{
     display:flex;
-    /* justify-self: stretch; */
     flex-wrap: wrap;
 
 }
@@ -98,3 +96,5 @@
     width: auto;
     max-width: fit-content;
 }
+
+ 

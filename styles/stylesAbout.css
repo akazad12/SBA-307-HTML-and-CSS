@@ -1,0 +1,28 @@
+ html, body {
+    margin:0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+ 
+body{
+    background-color: rgb(191, 219, 244);
+}
+
+div{
+    display:flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+table tr th{
+    border:1px solid black;
+
+} 
